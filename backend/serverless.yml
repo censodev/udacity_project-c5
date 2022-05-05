@@ -1,7 +1,6 @@
-# TODO: Change the name of the org
 org: censodev
-app: udacity-project-c4
-service: udacity-project-c4
+app: udacity-project-c5
+service: udacity-project-c5
 
 plugins:
   - serverless-webpack
@@ -49,7 +48,7 @@ provider:
   environment:
     TODOS_TABLE: Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
-    TODOS_S3_BUCKET: udacity-project-c4-bucket-001200004917-${self:provider.stage}
+    TODOS_S3_BUCKET: udacity-project-c5-bucket-001200004917-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 30000
 
   logs:
