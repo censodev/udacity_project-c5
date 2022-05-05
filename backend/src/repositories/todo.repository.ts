@@ -47,7 +47,10 @@ export class TodoRepository {
                 "todoId": todoId,
                 "userId": userId
             },
-            UpdateExpression: "set name = :name, done = :done, dueDate = :dueDate",
+            UpdateExpression: "set #aliasName = :name, done = :done, dueDate = :dueDate",
+            ExpressionAttributeNames: {
+                "#aliasName": "name"
+            },
             ExpressionAttributeValues: {
                 ":name": body.name,
                 ":done": body.done,
